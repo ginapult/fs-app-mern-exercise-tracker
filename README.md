@@ -93,13 +93,28 @@ ___
   * '/edit/:id' EditExercise
   * '/create' CreateExercise
   * '/user' CreateUser
-* add basic component stub info into each component to test connections are working
+* add basic component stub info into each component to test connections are working:
+```
+import React, { Component } from 'react';
+
+export default class ExercisesList extends Component {
+  render() {
+    return (
+      <div>
+        <p>You are on the Exercises List component!</p>
+      </div>
+    )
+  }
+}
+```
 * add div className 'container' to App.js to give some space on navbar left and right
 * build out each component by:
   * adding constructors before render () method for each class
   * set this.state
   * create methods for each class - using this.setState() and e.target.value - this refers to the whole class - use binding for this
-  * hard code simple user and create form to test - componentDidMount()
+  * hard code simple data and create form to test - componentDidMount()
   * this.state.users.map takes data from DB and maps over it and displays it
   * use npm install react-datepicker for date picker package - import it along with styling for datepicker
+  * connect front-end with back-end
+    * do this by getting front end to make http requests to the server endpoint on the backend - use the axios library to do this - npm install axios - and import into components
 
