@@ -10,6 +10,17 @@ ___
 * CORS - cross origin resource sharing - allows AJAX request to access remote hosts - access stuff outside server from our server
 * dotenv - loads env variables from dotenv file
 * nodemon - global - npm install -g nodemon
+___
+* React
+  * JS library for building UIs
+  * Components - small and isolated pieces of code
+    * tell React what we want to see on the screen
+    * when data changes, React efficiently updates and re-renders component
+    * React.Component classes
+    * Components take in parameters or 'props' and returns a React Element, or hierarchy of views, to display through the render () method - syntax is jsx, not html - jsx comes with full power of js
+      * e.g. ShoppingList extends React.Component > {this.props.name}
+    * instead of class we have className
+
 
 ### MongoDB
 * table = collections
@@ -68,7 +79,27 @@ ___
   * finish exercise routes with update and delete
 
 ### Front-end Complete
-
-
-
+* /public/index.html - remove comments and change title
+* /src/index.js - remove comments and service worker
+* /src/App.js - npm start to load on localhost 3000
+  * remove everything between the <div> tags, change className to "container"
+* npm install bootstrap css framework to make styling easier, import it into App.js
+* npm install react-router-dom - makes it easier to route urls to components
+* create router element - helps us manage specific url paths to different components that will help us load on the page - put all that we want to route in <Router> element
+* import into App.js the components we'll create
+* create each of the following components in separate files in components folder in src directory:
+  * Navbar
+  * '/' ExercisesList
+  * '/edit/:id' EditExercise
+  * '/create' CreateExercise
+  * '/user' CreateUser
+* add basic component stub info into each component to test connections are working
+* add div className 'container' to App.js to give some space on navbar left and right
+* build out each component by:
+  * adding constructors before render () method for each class
+  * set this.state
+  * create methods for each class - using this.setState() and e.target.value - this refers to the whole class - use binding for this
+  * hard code simple user and create form to test - componentDidMount()
+  * this.state.users.map takes data from DB and maps over it and displays it
+  * use npm install react-datepicker for date picker package - import it along with styling for datepicker
 
